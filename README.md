@@ -2,11 +2,11 @@
 ## SnowScene
 Using shaders, let the snow fall within the specified range.  
 Snow shakes randomly.  
-By changing the color of the texture to white by using the inner product of the object normal vector and the upward vector, snow appears to be piled up.  
+Using the inner product of the object's normal vector and the world's upward vector, we change the color of the texture to white, so that snow appears to be piled up.  
   
 シェーダを使って、特定範囲内に雪を降らせます。  
 雪はランダムに揺れ落ちます。  
-オブジェクトの法線ベクトルと上方向ベクトルの内積を使ってテクスチャの色を白に変動させることで雪が積もっているように見せています。  
+オブジェクトの法線ベクトルとワールドの上方向ベクトルの内積を使って、テクスチャの色を白に変動させることで雪が積もっているように見せています。  
   
 ![Snow](https://github.com/Nokokinoko/TestShader/blob/master/gif/Snow.gif)
 
