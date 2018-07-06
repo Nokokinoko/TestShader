@@ -162,7 +162,7 @@ Prefab:
     - target: {fileID: 2323336, guid: 8ed1fa325ca228645ad26dd6eff14768, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb9ac35bf695b4ed0bab8786b226b340, type: 2}
+      objectReference: {fileID: 537745479}
     - target: {fileID: 470440, guid: 8ed1fa325ca228645ad26dd6eff14768, type: 2}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -224,7 +224,7 @@ Prefab:
     - target: {fileID: 2380810, guid: 5578b82f17c954843901e8b68ca21dcc, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ddd07a262d9c4615aaf8a21a33dae96, type: 2}
+      objectReference: {fileID: 2053771153}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5578b82f17c954843901e8b68ca21dcc, type: 2}
   m_IsPrefabParent: 0
@@ -282,7 +282,7 @@ Prefab:
     - target: {fileID: 2376514, guid: ab5e0beb1c36778479983f28b65d97dd, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f7d181c6085d046e8900d0351af52e7c, type: 2}
+      objectReference: {fileID: 792670154}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab5e0beb1c36778479983f28b65d97dd, type: 2}
   m_IsPrefabParent: 0
@@ -322,6 +322,7 @@ MonoBehaviour:
   - {fileID: 1205130025}
   - {fileID: 265823587}
   - {fileID: 1497102965}
+  m_PileUp: 0
 --- !u!4 &358202777
 Transform:
   m_ObjectHideFlags: 0
@@ -385,7 +386,7 @@ Prefab:
     - target: {fileID: 2323336, guid: 8ed1fa325ca228645ad26dd6eff14768, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb9ac35bf695b4ed0bab8786b226b340, type: 2}
+      objectReference: {fileID: 845999513}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ed1fa325ca228645ad26dd6eff14768, type: 2}
   m_IsPrefabParent: 0
@@ -470,6 +471,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &537745479
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomSnow_Tree (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: b29a217201b05434a9e9990668ee61ac, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8ba8b94b5ab0c214fa2810a7df98a1a9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Glossiness: 0.5
+    - _Metallic: 0
+    - _Snow: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &730897151
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,14 +670,98 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6db862279a4a94ebd96a902b2ac29144, type: 2}
+      objectReference: {fileID: 1800519902}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0cf8146888c5ba4ebd406d6a76baeb7, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &792670154
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomSnow_Fence (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: b29a217201b05434a9e9990668ee61ac, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: d63761f76a7a53b43b47dd37908310e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Glossiness: 0.5
+    - _Metallic: 0
+    - _Snow: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!21 &845999513
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomSnow_Tree (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: b29a217201b05434a9e9990668ee61ac, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8ba8b94b5ab0c214fa2810a7df98a1a9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Glossiness: 0.5
+    - _Metallic: 0
+    - _Snow: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &964192921 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 111856, guid: ab5e0beb1c36778479983f28b65d97dd, type: 2}
   m_PrefabInternal: {fileID: 1652177319}
+--- !u!21 &1013229402
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomSnow_Ground (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: b29a217201b05434a9e9990668ee61ac, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Glossiness: 0.5
+    - _Metallic: 0
+    - _Snow: 0
+    m_Colors:
+    - _Color: {r: 0.17254902, g: 0.2509804, b: 0.02745098, a: 1}
 --- !u!1 &1205130025 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 185286, guid: 8ed1fa325ca228645ad26dd6eff14768, type: 2}
@@ -699,7 +812,7 @@ Prefab:
     - target: {fileID: 2336884, guid: 7c5aafe3fe2c6ef4a9150f7f44653760, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb9ac35bf695b4ed0bab8786b226b340, type: 2}
+      objectReference: {fileID: 2088610536}
     - target: {fileID: 489912, guid: 7c5aafe3fe2c6ef4a9150f7f44653760, type: 2}
       propertyPath: m_LocalScale.x
       value: 0.6
@@ -746,7 +859,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4a2e28b128e9a492e8ca4945d0dd66cc, type: 2}
+  - {fileID: 1013229402}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -855,19 +968,131 @@ Prefab:
     - target: {fileID: 2376514, guid: ab5e0beb1c36778479983f28b65d97dd, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f7d181c6085d046e8900d0351af52e7c, type: 2}
+      objectReference: {fileID: 1698339914}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab5e0beb1c36778479983f28b65d97dd, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &1698339914
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomSnow_Fence (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: b29a217201b05434a9e9990668ee61ac, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: d63761f76a7a53b43b47dd37908310e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Glossiness: 0.5
+    - _Metallic: 0
+    - _Snow: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1711621626 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013289884710, guid: f0cf8146888c5ba4ebd406d6a76baeb7,
     type: 2}
   m_PrefabInternal: {fileID: 747522265}
+--- !u!21 &1800519902
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomSnow_House (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: b29a217201b05434a9e9990668ee61ac, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 172352d8dbbc157429d9f4d662158a0d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Glossiness: 0.5
+    - _Metallic: 0
+    - _Snow: 0
+    m_Colors:
+    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
 --- !u!1 &2009441256 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 111856, guid: ab5e0beb1c36778479983f28b65d97dd, type: 2}
   m_PrefabInternal: {fileID: 314877061}
+--- !u!21 &2053771153
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomSnow_Rock (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: b29a217201b05434a9e9990668ee61ac, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 6eb1476b439514548903a089becbf46a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Glossiness: 0.5
+    - _Metallic: 0
+    - _Snow: 0
+    m_Colors:
+    - _Color: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+--- !u!21 &2088610536
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomSnow_Tree (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: b29a217201b05434a9e9990668ee61ac, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8ba8b94b5ab0c214fa2810a7df98a1a9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Glossiness: 0.5
+    - _Metallic: 0
+    - _Snow: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2142117087
 GameObject:
   m_ObjectHideFlags: 0
