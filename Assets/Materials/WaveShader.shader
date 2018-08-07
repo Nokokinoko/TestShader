@@ -5,7 +5,7 @@
 
 	sampler2D _PositionBuffer;
 
-	float2 random ( float2 st )
+	float2 random2 ( float2 st )
 	{
 		st = float2 (
 			dot ( st, float2 ( 127.1, 311.7 ) ),
@@ -16,14 +16,14 @@
 
 	float perlin_noise ( float2 st )
 	{
+		float2 p = floor ( st );
 		float2 f = frac ( st );
 		float2 u = f * f * ( 3.0 - 2.0 * f );
 
-		float2 p = floor ( st );
-		float v00 = random ( p + float2 ( 0, 0 ) );
-		float v10 = random ( p + float2 ( 1, 0 ) );
-		float v01 = random ( p + float2 ( 0, 1 ) );
-		float v11 = random ( p + float2 ( 1, 1 ) );
+		float v00 = random2 ( p + float2 ( 0, 0 ) );
+		float v10 = random2 ( p + float2 ( 1, 0 ) );
+		float v01 = random2 ( p + float2 ( 0, 1 ) );
+		float v11 = random2 ( p + float2 ( 1, 1 ) );
 
 		return lerp (
 			lerp ( dot ( v00, f - float2 ( 0, 0 ) ), dot ( v10, f - float2 ( 1, 0 ) ), u.x ),
@@ -42,7 +42,7 @@
 	float4 frag_update_position ( v2f_img i ) : SV_Target
 	{
 		float4 p = tex2D ( _PositionBuffer, i.uv );
-		p.y = perlin_noise ( float2 ( i.uv.x * 10, i.uv.y * 10 + _Time.x * 10 ) );
+		p.y = perlin_noise ( float2 ( i.uv.x * 10, i.uv.y * 10 + _Time.x * 10 ) ) * 10;
 		return p;
 	}
 	ENDCG

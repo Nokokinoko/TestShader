@@ -97,9 +97,9 @@ public partial class CubeWave : MonoBehaviour
 	#region UnityEngine
 	void Update ()
 	{
-		if ( m_IsNeedReset )
+		if ( this.m_IsNeedReset )
 		{
-			ResetResource ();
+			this.ResetResource ();
 		}
 
 		this.SwapBufferAndInvokeKernel ();
@@ -114,7 +114,7 @@ public partial class CubeWave : MonoBehaviour
 		Vector3 _Position = transform.position;
 		Quaternion _Rotation = transform.rotation;
 		Material _Material = this.m_Material;
-		Vector2 _UV = new Vector2 ( 0.5f / this.m_PositionBuffer2.width, 0 );
+		Vector2 _UV = new Vector2 ( 0.5f / this.m_PositionBuffer2.width, 0.0f );
 		for ( int i = 0 ; i < this.m_PositionBuffer2.height ; i++ )
 		{
 			_UV.y = ( 0.5f + i ) / this.m_PositionBuffer2.height;
@@ -139,9 +139,9 @@ public partial class CubeWave : MonoBehaviour
 			DestroyImmediate ( this.m_PositionBuffer2 );
 		}
 
-		if ( this.m_Material )
+		if ( this.m_MaterialKernel )
 		{
-			DestroyImmediate ( this.m_Material );
+			DestroyImmediate ( this.m_MaterialKernel );
 		}
 	}
 	#endregion

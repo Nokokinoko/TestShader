@@ -33,9 +33,9 @@ partial class CubeWave
 
 		public void Release ()
 		{
-			if ( this.Mesh )
+			if ( this.m_Mesh )
 			{
-				DestroyImmediate ( this.Mesh );
+				DestroyImmediate ( this.m_Mesh );
 				this.m_CountCopy = 0;
 			}
 		}
@@ -72,25 +72,25 @@ partial class CubeWave
 						new Vector3 ( -1, 1, 0 ),	new Vector3 ( 1, 1, 0 ),
 						new Vector3 ( -1, -1, 0 ),	new Vector3 ( 1, -1, 0 ),
 						new Vector3 ( 1, 1, 0 ),	new Vector3 ( -1, 1, 0 ),
-						new Vector3 ( 1, -1, 0 ),	new Vector3 ( -1, -1, 0 ),
+						new Vector3 ( 1, -1, 0 ),	new Vector3 ( -1, -1, 0 )
 					};
 					this.m_Normal_r = new Vector3[] {
 						Vector3.forward,		Vector3.forward,
 						Vector3.forward,		Vector3.forward,
 						Vector3.forward * -1,	Vector3.forward * -1,
-						Vector3.forward * -1,	Vector3.forward * -1,
+						Vector3.forward * -1,	Vector3.forward * -1
 					};
 					this.m_Tangent_r = new Vector4[] {
-						new Vector4 ( 1, 0, 0, 1 ),	new Vector4 ( 1, 0, 0, 1 ),
-						new Vector4 ( 1, 0, 0, 1 ),	new Vector4 ( 1, 0, 0, 1 ),
+						new Vector4 ( 1, 0, 0, 1 ),		new Vector4 ( 1, 0, 0, 1 ),
+						new Vector4 ( 1, 0, 0, 1 ),		new Vector4 ( 1, 0, 0, 1 ),
 						new Vector4 ( -1, 0, 0, 1 ),	new Vector4 ( -1, 0, 0, 1 ),
-						new Vector4 ( -1, 0, 0, 1 ),	new Vector4 ( -1, 0, 0, 1 ),
+						new Vector4 ( -1, 0, 0, 1 ),	new Vector4 ( -1, 0, 0, 1 )
 					};
 					this.m_UV_r = new Vector2[] {
 						new Vector2 ( 0, 1 ),	new Vector2 ( 1, 1 ),
 						new Vector2 ( 0, 0 ),	new Vector2 ( 1, 0 ),
 						new Vector2 ( 1, 1 ),	new Vector2 ( 0, 1 ),
-						new Vector2 ( 1, 0 ),	new Vector2 ( 0, 0 ),
+						new Vector2 ( 1, 0 ),	new Vector2 ( 0, 0 )
 					};
 					this.m_Index_r = new int[] { 0, 1, 2, 3, 2, 1, 4, 5, 6, 7, 6, 5 };
 				}
@@ -98,7 +98,7 @@ partial class CubeWave
 
 			public void CopyVertexTo ( Vector3[] pDestination_r, int pPosition )
 			{
-				System.Array.Copy ( this.m_Vertex_r, 0, pDestination_r, pPosition, this.CountVertex );
+				System.Array.Copy ( this.m_Vertex_r, 0, pDestination_r, pPosition, this.m_Vertex_r.Length );
 			}
 
 			public void CopyNormalTo ( Vector3[] pDestination_r, int pPosition )
@@ -118,7 +118,7 @@ partial class CubeWave
 
 			public void CopyIndexTo ( int[] pDestination_r, int pPosition, int pOffset )
 			{
-				for ( int i = 0 ; i < this.CountIndex ; i++ )
+				for ( int i = 0 ; i < this.m_Index_r.Length ; i++ )
 				{
 					pDestination_r[ pPosition + i ] = pOffset + this.m_Index_r[ i ];
 				}
@@ -133,7 +133,7 @@ partial class CubeWave
 			{
 				// Default shape
 				_Cache_r = new StructShapeCache[] {
-					new StructShapeCache ( null ),
+					new StructShapeCache ( null )
 				};
 			}
 			else
@@ -186,7 +186,7 @@ partial class CubeWave
 				_Cache.CopyUVTo ( _UV1_r, iVertex );
 				_Cache.CopyIndexTo ( _Index_r, iIndex, iVertex );
 
-				Vector2 _Coord = new Vector2 ( (float)iElm / this.CountCopy, 0 );
+				Vector2 _Coord = new Vector2 ( (float)iElm / this.CountCopy, 0.0f );
 				for ( int i = 0 ; i < _Cache.CountVertex ; i++ )
 				{
 					_UV2_r[ iVertex + i ] = _Coord;

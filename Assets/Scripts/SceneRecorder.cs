@@ -41,7 +41,7 @@ public class SceneRecorder : MonoBehaviour
 				if ( 0 < m_Frame )
 				{
 					string path = "Capture/frame" + m_Frame.ToString ( "0000" ) + ".png";
-					Application.CaptureScreenshot ( path, m_Size );
+					ScreenCapture.CaptureScreenshot ( path, m_Size );
 				}
 
 				m_Frame++;
