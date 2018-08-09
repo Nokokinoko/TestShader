@@ -21,7 +21,7 @@ partial class CubeWave
 		// Constructor
 		public BulkMesh ( Mesh[] pShape_r, int pCountCopyMax )
 		{
-			this.m_CountCopyMax = Mathf.Max ( pCountCopyMax, 4096 );
+			this.m_CountCopyMax = Mathf.Min ( pCountCopyMax, 4096 );
 			this.CombineMesh ( pShape_r );
 		}
 
