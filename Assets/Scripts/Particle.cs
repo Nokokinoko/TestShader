@@ -189,7 +189,7 @@ public class Particle : MonoBehaviour
 			DestroyImmediate ( this.m_VelocityBuffer2 );
 		}
 
-		if ( !this.m_MaterialKernel )
+		if ( this.m_MaterialKernel )
 		{
 			DestroyImmediate ( this.m_MaterialKernel );
 		}

@@ -25,7 +25,7 @@
 		float4 p = tex2Dlod ( _PositionBuffer, v.v );
 
 		v2f o;
-		o.vertex = UnityObjectToClipPos( p );
+		o.vertex = UnityObjectToClipPos ( p );
 		o.color = v.color;
 		o.size = 1;
 		o.worldPos = mul ( unity_ObjectToWorld, p ).xyz;

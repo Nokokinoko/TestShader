@@ -15,17 +15,17 @@
 		return float4 ( i.uv.x, 0, i.uv.y, 1 );
 	}
 
+	float4 frag_init_velocity ( v2f_img i ) : SV_Target
+	{
+		return float4 ( 0, 0, 0, 1 );
+	}
+
 	float4 frag_update_position ( v2f_img i ) : SV_Target
 	{
 		float4 p = tex2D ( _PositionBuffer, i.uv );
 		float3 v = tex2D ( _VelocityBuffer, i.uv ).xyz;
 		p.xyz += v * unity_DeltaTime.x;
 		return p;
-	}
-
-	float4 frag_init_velocity ( v2f_img i ) : SV_Target
-	{
-		return float4 ( 0, 0, 0, 1 );
 	}
 
 	float4 frag_update_velocity ( v2f_img i ) : SV_Target

@@ -27,7 +27,7 @@ float3 noise_grad ( float3 v )
 	float3 x0 = v - i + dot ( i, _C.xxx );
 
 	// Other corner
-	float3 g = step ( x0.xyz, x0.xyz );
+	float3 g = step ( x0.yzx, x0.xyz );
 	float3 l = 1.0 - g;
 	float3 i1 = min ( g.xyz, l.zxy );
 	float3 i2 = max ( g.xyz, l.zxy );
@@ -84,7 +84,7 @@ float3 noise_grad ( float3 v )
 	g3 *= nmlz.w;
 
 	// Noise
-	float4 m = max ( 0.6 - float4 ( dot ( x0, x0 ), dot (x1, x1 ), dot ( x2, x2 ), dot ( x3, x3 ) ), 0.0 );
+	float4 m = max ( 0.6 - float4 ( dot ( x0, x0 ), dot ( x1, x1 ), dot ( x2, x2 ), dot ( x3, x3 ) ), 0.0 );
 	float4 m2 = m * m;
 	float4 m3 = m2 * m;
 	float4 m4 = m2 * m2;
