@@ -12,7 +12,7 @@
 	}
 	SubShader
 	{
-		Tags { "RenderType"="Opaque" }
+		Tags { "RenderType" = "Opaque" }
 
 		CGPROGRAM
 		#pragma surface surf Standard vertex:vert nolightmap addshadow
