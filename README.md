@@ -44,4 +44,4 @@ This software is released under the MIT License, see LICENSE.
 
 # Authors
 SYOTA TSUDA  
-http://dokonoko.pinoko.jp/project/
+https://whale-no12.work/
